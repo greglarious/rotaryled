@@ -38,10 +38,11 @@ void loop() {
     if ((millis() - lastPush) > 250) {
       lastPush = millis();
       mode++;
-      if (mode > 3) mode = 0;
+      if (mode > 4) mode = 0;
     }
   }
   long position = encoder.read() / 2;
+  int sleep = abs(position) % 500;
 
   switch(mode) {
   // off
@@ -56,12 +57,28 @@ void loop() {
             strip.setPixelColor(i, colorWheel(BRIGHTNESS, (position * 5) % WHEEL_SIZE));
           }
           break;
-  // auto moving light, knob adjusts speed
-  case 3: int sleep = abs(position) % 500;
+  // one auto moving light, knob adjusts speed
+  case 3: 
           delay(sleep);
           initializeToBlack();
           
           strip.setPixelColor(autoPosition, colorWheel(BRIGHTNESS, autoPosition * (WHEEL_SIZE / NUM_LEDS)));
+          autoPosition++;
+          if (autoPosition >= NUM_LEDS) {
+            autoPosition = 0;         
+          }
+          break;
+  // slug of rainbow auto moving lights, knob adjusts speed
+  case 4:
+          const int SLUG_SIZE = 15;
+          
+          delay(sleep);
+          initializeToBlack();
+          
+          for (int i = 0; i < SLUG_SIZE; i++) {
+            strip.setPixelColor((i + autoPosition) % NUM_LEDS, colorWheel(BRIGHTNESS, i * (WHEEL_SIZE / SLUG_SIZE)));
+          }
+          
           autoPosition++;
           if (autoPosition >= NUM_LEDS) {
             autoPosition = 0;         
