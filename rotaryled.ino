@@ -1,16 +1,20 @@
 #include <Encoder.h>
 #include <Adafruit_NeoPixel.h>
 
-const int NUM_LEDS = 6;            // number of leds in strip
+const int NUM_LEDS = 30;            // number of leds in strip
 const int LED_PIN = 7;             // pin for led strip
 const int BRIGHTNESS = 255;        // brightness of all leds
 const int WHEEL_SIZE = 256;        // how many entries in the color wheel
 const boolean MOVE_LIGHT = false;  // move one light around or keep all lights on
 const int ENCODER_PIN_1 = 2;
 const int ENCODER_PIN_2 = 3;
+const int ENCODER_BUTTON = 4;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_RGB + NEO_KHZ800);
 Encoder encoder(ENCODER_PIN_1, ENCODER_PIN_2);
+int mode = 0;
+long lastPush = 0;
+int autoPosition = 0;
 
 void initializeToBlack() {
   for (int i =0; i < NUM_LEDS; i++) {
@@ -19,21 +23,50 @@ void initializeToBlack() {
 }
 
 void setup() {
+  Serial.begin(9600);
+  pinMode(ENCODER_BUTTON, INPUT);
+  digitalWrite(ENCODER_BUTTON, HIGH); //turn pullup resistor on
+
   strip.begin();
   initializeToBlack();
   strip.show();   
 }
 
 void loop() {
-  long position = encoder.read();
+  int button= digitalRead(ENCODER_BUTTON);
+  if (button == 0) {
+    if ((millis() - lastPush) > 250) {
+      lastPush = millis();
+      mode++;
+      if (mode > 3) mode = 0;
+    }
+  }
+  long position = encoder.read() / 2;
 
-  if (MOVE_LIGHT) {
-    initializeToBlack();
-    strip.setPixelColor((position/2) % NUM_LEDS, colorWheel(BRIGHTNESS, position % WHEEL_SIZE));
-  } else {
-    for (int i =0; i < NUM_LEDS; i++) {
-     strip.setPixelColor(i, colorWheel(BRIGHTNESS, position % WHEEL_SIZE));
-    }    
+  switch(mode) {
+  // off
+  case 0: initializeToBlack();
+          break;
+  // knob moves led
+  case 1: initializeToBlack();
+          strip.setPixelColor(position % NUM_LEDS, colorWheel(BRIGHTNESS, position % WHEEL_SIZE));
+          break;
+  // all on, knob makes rainbow
+  case 2: for (int i =0; i < NUM_LEDS; i++) {
+            strip.setPixelColor(i, colorWheel(BRIGHTNESS, (position * 5) % WHEEL_SIZE));
+          }
+          break;
+  // auto moving light, knob adjusts speed
+  case 3: int sleep = abs(position) % 500;
+          delay(sleep);
+          initializeToBlack();
+          
+          strip.setPixelColor(autoPosition, colorWheel(BRIGHTNESS, autoPosition * (WHEEL_SIZE / NUM_LEDS)));
+          autoPosition++;
+          if (autoPosition >= NUM_LEDS) {
+            autoPosition = 0;         
+          }
+          break;
   }
   strip.show();
 }
