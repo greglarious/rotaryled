@@ -32,6 +32,12 @@ void setup() {
   strip.show();   
 }
 
+long normalize(long value, long radix) {
+  long rval = value % radix;
+  if (rval < 0) return radix + rval;
+  else return rval; 
+}
+
 void loop() {
   int button= digitalRead(ENCODER_BUTTON);
   if (button == 0) {
@@ -41,25 +47,28 @@ void loop() {
       if (mode > 4) mode = 0;
     }
   }
-  long position = encoder.read() / 2;
-  int sleep = abs(position) % 500;
+  long knobValue = encoder.read() / 2;
 
+  long ledPosition = normalize(knobValue, NUM_LEDS);
+  long colorValue = normalize(knobValue * 5, WHEEL_SIZE);
+  long sleepValue = abs(knobValue) % 500);
+  
   switch(mode) {
   // off
   case 0: initializeToBlack();
           break;
   // knob moves led
   case 1: initializeToBlack();
-          strip.setPixelColor(position % NUM_LEDS, colorWheel(BRIGHTNESS, position % WHEEL_SIZE));
+          strip.setPixelColor(ledPosition, colorWheel(BRIGHTNESS, colorValue));
           break;
   // all on, knob makes rainbow
   case 2: for (int i =0; i < NUM_LEDS; i++) {
-            strip.setPixelColor(i, colorWheel(BRIGHTNESS, (position * 5) % WHEEL_SIZE));
+            strip.setPixelColor(i, colorWheel(BRIGHTNESS, colorValue));
           }
           break;
   // one auto moving light, knob adjusts speed
   case 3: 
-          delay(sleep);
+          delay(sleepValue);
           initializeToBlack();
           
           strip.setPixelColor(autoPosition, colorWheel(BRIGHTNESS, autoPosition * (WHEEL_SIZE / NUM_LEDS)));
@@ -72,7 +81,7 @@ void loop() {
   case 4:
           const int SLUG_SIZE = 15;
           
-          delay(sleep);
+          delay(sleepValue);
           initializeToBlack();
           
           for (int i = 0; i < SLUG_SIZE; i++) {
