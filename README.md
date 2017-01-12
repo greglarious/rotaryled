@@ -7,8 +7,8 @@ this project describes building an arduino connected to an RGB led strip and a r
 * suggested parts list
 
 
-| Part | Price | Link                                     
-| - | - | -
-| arduino uno starter kit | 34.95 | https://www.adafruit.com/products/193  
-| rotary encoder | 4.50 | https://www.adafruit.com/products/377   
-| 1m led strip | 16.95 | https://www.adafruit.com/products/1460  
+| Part | Price | Link |                                     
+| - | - | - |
+| arduino uno starter kit | 34.95 | https://www.adafruit.com/products/193 |
+| rotary encoder | 4.50 | https://www.adafruit.com/products/377 |
+| 1m led strip | 16.95 | https://www.adafruit.com/products/1460 |
