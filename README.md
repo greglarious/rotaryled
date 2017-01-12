@@ -5,8 +5,8 @@ this project describes building an arduino connected to an RGB led strip and a r
  * for controlling the RGB LEDs: https://github.com/adafruit/Adafruit_NeoPixel
  * for reading the rotary encoder: http://www.pjrc.com/teensy/td_libs_Encoder.html
 * suggested parts list
-Part                    | Price | Link                                   |
--------------------------|-------|----------------------------------------|
-arduino uno starter kit | 34.95 | https://www.adafruit.com/products/193  |
-rotary encoder          | 4.50  | https://www.adafruit.com/products/377  |
-1m led strip            | 16.95 | https://www.adafruit.com/products/1460 |
+Part                     | Price   | Link                                     |
+------------------------ | ------- | ---------------------------------------- |
+arduino uno starter kit  | 34.95   | https://www.adafruit.com/products/193    |
+rotary encoder           | 4.50    | https://www.adafruit.com/products/377    |
+1m led strip             | 16.95   | https://www.adafruit.com/products/1460   |
