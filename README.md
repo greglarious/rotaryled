@@ -6,18 +6,18 @@ this project describes building an arduino connected to an RGB led strip and a r
  * for reading the rotary encoder: http://www.pjrc.com/teensy/td_libs_Encoder.html
 * suggested parts list from Adafruit
 
-| Part | Price | Link | Notes |                                      
-|------|-------|------|-------|
-| arduino uno starter kit | 34.95 | https://www.adafruit.com/products/193 | Has a few extra parts but overall a great deal |
-| rotary encoder | 4.50 | https://www.adafruit.com/products/377 | Includes a plastic knob |
-| 1m led strip | 16.95 | https://www.adafruit.com/products/1460 | This may or may not have the JST connector on the end. If not, just solder 3 wires (or a 3 pin JST socket connector) directly onto the strip. The longer 5m strip will definitely have a connector |
+| Part | Price | Notes |                                      
+|------|-------|-------|
+| [arduino uno starter kit](https://www.adafruit.com/products/193) | 34.95 | Has a few extra parts but overall a great deal |
+| [rotary encoder](https://www.adafruit.com/products/377) | 4.50 | Includes a plastic knob |
+| [1m led strip](https://www.adafruit.com/products/1460) | 16.95 | This may or may not have the JST connector on the end. If not, just solder 3 wires (or a 3 pin JST socket connector) directly onto the strip. The longer 5m strip will definitely have a connector |
 
 * suggested parts list from Sparkfun
 
-| Part | Price | Link | Notes |                                      
-|------|-------|------|-------|
-| redboard with arduino | | | |
-| jumper wires          | | | |
-| rotary encoder        | | | |
-| knob for encoder      | | | |
-| 1m led strip          | | | |
+| Part | Price | Notes |                                      
+|------|-------|-------|
+| redboard with arduino | | | 
+| jumper wires          | | | 
+| rotary encoder        | | | 
+| knob for encoder      | | | 
+| 1m led strip          | | | 
