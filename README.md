@@ -21,3 +21,12 @@ this project describes building an arduino connected to an RGB led strip and a r
 | [rotary_encoder_with_rgb](https://www.sparkfun.com/products/10982) | $4.95 | The pinout is different on this encoder. Just ordered one and will post an update video when i get a chance to try it out. | 
 | [knob_for_encoder](https://www.sparkfun.com/products/10597)      | $0.95 | | 
 | [1m_led_strip](https://www.sparkfun.com/products/14015)          | $15.95 | this has 60 leds instead of 30 | 
+
+* suggested parts list from amazon
+
+| Part | Price | Notes |                                      
+|------|-------|-------|
+| [arduino_uno_r3](https://www.amazon.com/Arduino-Uno-R3-Microcontroller-A000066/dp/B008GRTSV6) | $16.06 | | 
+| [jumper_wires](https://www.amazon.com/Honbay-120pcs-Multicolored-Female-Breadboard/dp/B017NEGTXC) | $7.97 | lots of wires! | 
+| [rotary_encoder_with_knob](https://www.amazon.com/Adafruit-Accessories-Rotary-Encoder-piece/dp/B00SK8KK5Y) | $8.97 | adafruit encoder with knob | 
+| [1m_led_strip](https://www.amazon.com/Mokungit-WS2811-Addressable-Digital-Non-waterproof/dp/B01D18JIH8)          | $7.88 |  | 
