@@ -28,4 +28,4 @@ this project describes building an arduino connected to an RGB led strip and a r
 | [arduino_uno_r3](https://www.amazon.com/Arduino-Uno-R3-Microcontroller-A000066/dp/B008GRTSV6) | $16.06 | | 
 | [jumper_wires](https://www.amazon.com/Honbay-120pcs-Multicolored-Female-Breadboard/dp/B017NEGTXC) | $7.97 | lots of wires! | 
 | [rotary_encoder_with_knob](https://www.amazon.com/Adafruit-Accessories-Rotary-Encoder-piece/dp/B00SK8KK5Y) | $8.97 | adafruit encoder with knob | 
-| [1m_led_strip](https://www.amazon.com/Mokungit-WS2811-Addressable-Digital-Non-waterproof/dp/B01D18JIH8)          | $7.88 |  | 
+| [1m_led_strip](https://www.amazon.com/Mokungit-Programmable-Individual-Addressable-Non-waterproof/dp/B01D1GJ8KC)          | $12.88 |  | 
