@@ -1,4 +1,4 @@
-this project describes building an arduino connected to an RGB led strip and a rotary encoder 
+This project describes building an educational Arduino connected to an RGB led strip and a rotary encoder 
 * playlist of related videos describing the concepts and steps: https://www.youtube.com/playlist?list=PLEn3R4esjTgkLwjWCui7rWVhmKn9WuJTh
 * the best way to build this project is with the Arduino IDE
  * Arduino IDE available here: https://www.arduino.cc/en/Main/Software
@@ -28,7 +28,7 @@ this project describes building an arduino connected to an RGB led strip and a r
 | [1m_led_strip](https://www.adafruit.com/products/1460) | $16.95 | This may or may not have the JST connector on the end. If not, just solder 3 wires (or a 3 pin JST socket connector) directly onto the strip. The longer 5m strip will definitely have a connector |
 
 
-##suggested parts list from amazon
+##suggested parts list from Amazon
 | Part | Price | Notes |                                      
 |------|-------|-------|
 | [arduino_uno_r3](https://www.amazon.com/Arduino-Uno-R3-Microcontroller-A000066/dp/B008GRTSV6) | $16.06 | | 
