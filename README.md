@@ -9,7 +9,7 @@ This project describes building an educational Arduino connected to an RGB led s
  
 
 #Parts List#
-These lists below are intended to be helpful examples, not an endorsement of any particular seller. The links and prices are  going to become outdated quickly and I make no promise to keep them updated constantly. However, they should give a general idea of what is needed for this project.
+The lists below are intended to be helpful examples, not an endorsement of any particular seller or product. The links and prices are going to become outdated quickly. I make no promise to keep them updated constantly but let me know if you find an issue.
 
 ##suggested parts list from Sparkfun
 | Part | Price | Notes |                                      
