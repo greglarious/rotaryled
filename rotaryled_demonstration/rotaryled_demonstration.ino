@@ -2,7 +2,7 @@
 #include <Adafruit_NeoPixel.h>
 
 const int NUM_LEDS = 30;            // number of leds in strip
-const int LED_PIN = 8;             // pin for led strip
+const int LED_PIN = 5;             // pin for led strip
 const int BRIGHTNESS = 255;        // brightness of all leds
 const int WHEEL_SIZE = 256;        // how many entries in the color wheel
 const boolean MOVE_LIGHT = false;  // move one light around or keep all lights on
