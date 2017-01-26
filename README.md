@@ -1,9 +1,13 @@
 this project describes building an arduino connected to an RGB led strip and a rotary encoder 
 * playlist of related videos describing the concepts and steps: https://www.youtube.com/playlist?list=PLEn3R4esjTgkLwjWCui7rWVhmKn9WuJTh
-* the best way to build this project is with the Arduino IDE available here: https://www.arduino.cc/en/Main/Software
+* the best way to build this project is with the Arduino IDE
+ * Arduino IDE available here: https://www.arduino.cc/en/Main/Software
+ * Possibly helpful driver for CH340 USB devices here: https://github.com/Makeblock-official/Makeblock-USB-Driver
 * this project uses two libraries
  * for controlling the RGB LEDs: https://github.com/adafruit/Adafruit_NeoPixel
  * for reading the rotary encoder: http://www.pjrc.com/teensy/td_libs_Encoder.html
+ 
+
 
 
 ##suggested parts list from Sparkfun
