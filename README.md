@@ -8,7 +8,8 @@ This project describes building an educational Arduino connected to an RGB led s
  * for reading the rotary encoder: http://www.pjrc.com/teensy/td_libs_Encoder.html
  
 
-
+#Parts List#
+These lists below are intended to be helpful examples, not an endorsement of any particular seller. The links and prices are  going to become outdated quickly and I make no promise to keep them updated constantly. However, they should give a general idea of what is needed for this project.
 
 ##suggested parts list from Sparkfun
 | Part | Price | Notes |                                      
