@@ -1,5 +1,8 @@
+#Overview#
 This project describes building an educational Arduino connected to an RGB led strip and a rotary encoder 
 * playlist of related videos describing the concepts and steps: https://www.youtube.com/playlist?list=PLEn3R4esjTgkLwjWCui7rWVhmKn9WuJTh
+
+#Build Environment#
 * the best way to build this project is with the Arduino IDE
  * Arduino IDE available here: https://www.arduino.cc/en/Main/Software
  * Possibly helpful driver for CH340 USB devices here: https://github.com/Makeblock-official/Makeblock-USB-Driver
@@ -7,7 +10,6 @@ This project describes building an educational Arduino connected to an RGB led s
  * for controlling the RGB LEDs: https://github.com/adafruit/Adafruit_NeoPixel
  * for reading the rotary encoder: http://www.pjrc.com/teensy/td_libs_Encoder.html
  
-
 #Parts List#
 The lists below are intended to be helpful examples, not an endorsement of any particular seller or product. The links and prices are going to become outdated quickly. I make no promise to keep them updated constantly but let me know if you find an issue.
 
