@@ -13,6 +13,7 @@ This project describes building an educational Arduino connected to an RGB led s
 #Parts List#
 The lists below are intended to be helpful examples, not an endorsement of any particular seller or product. The links and prices are going to become outdated quickly. I make no promise to keep them updated constantly but let me know if you find an issue.
 
+
 ##suggested parts list from Sparkfun
 | Part | Price | Notes |                                      
 |------|-------|-------|
@@ -38,3 +39,6 @@ The lists below are intended to be helpful examples, not an endorsement of any p
 | [jumper_wires](https://www.amazon.com/Honbay-120pcs-Multicolored-Female-Breadboard/dp/B017NEGTXC) | $7.97 | lots of wires! | 
 | [rotary_encoder_with_knob](https://www.amazon.com/Adafruit-Accessories-Rotary-Encoder-piece/dp/B00SK8KK5Y) | $8.97 | adafruit encoder with knob | 
 | [1m_led_strip](https://www.amazon.com/Mokungit-Programmable-Individual-Addressable-Non-waterproof/dp/B01D1GJ8KC)          | $12.88 |  | 
+
+# Schematic
+![Schematic](https://github.com/greglarious/rotaryled/raw/master/schematic.png)
